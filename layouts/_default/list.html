@@ -7,6 +7,58 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/css/site.css?v=6" | relURL }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner page-width">
+      <a class="site-name" href="{{ "/" | relURL }}">Patryk Fajga</a>
+      <nav class="main-nav" aria-label="Główna nawigacja">
+        <a href="{{ "/#about" | relURL }}">O mnie</a>
+        <a href="{{ "/projects/" | relURL }}">Projekty</a>
+        <a href="{{ "/conferences/" | relURL }}">Konferencje</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="page-width">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </section>
+    {{ if eq .Section "conferences" }}
+    <section class="conference-text page-width">
+      {{ .Content }}
+    </section>
+    {{ else }}
+    <section class="archive-list page-width">
+      {{ range $i, $item := .Pages.ByDate.Reverse }}
+      <a class="archive-item" href="{{ $item.RelPermalink }}">
+        <span class="archive-index">0{{ add $i 1 }}</span>
+        <span class="archive-date">{{ $item.Date.Format "Jan 2006" }}</span>
+        <h2>{{ $item.Title }}</h2>
+        {{ with $item.Summary }}<p class="archive-summary">{{ . }}</p>{{ end }}
+        <span class="archive-arrow">↗</span>
+      </a>
+      {{ end }}
+    </section>
+    {{ end }}
+  </main>
+  <footer class="site-footer page-width">
+    <span>© 2026 Patryk Fajga</span>
+    <a href="{{ "/" | relURL }}">Strona główna</a>
+  </footer>
+</body>
+</html><!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} · Patryk Fajga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/site.css?v=4" | relURL }}">
 </head>
 <body>
