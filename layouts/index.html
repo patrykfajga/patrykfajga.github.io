@@ -3,73 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Patryk Fajga — projekty, konferencje i krótkie notatki.">
+  <meta name="description" content="Patryk Fajga — projekty i konferencje.">
   <title>Patryk Fajga</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "css/site.css?v=4" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/site.css?v=5" | relURL }}">
 </head>
 <body>
   <header class="site-header">
     <div class="site-header-inner page-width">
       <a class="site-name" href="{{ "/" | relURL }}">Patryk Fajga</a>
-      <nav class="main-nav" aria-label="Główna nawigacja">
-        <a href="{{ "/#about" | relURL }}">O mnie</a>
-        <a href="{{ "/projects/" | relURL }}">Projekty</a>
-        <a href="{{ "/conferences/" | relURL }}">Konferencje</a>
-      </nav>
+      <nav class="main-nav" aria-label="Główna nawigacja"><a href="{{ "/#about" | relURL }}">O mnie</a><a href="{{ "/projects/" | relURL }}">Projekty</a><a href="{{ "/conferences/" | relURL }}">Konferencje</a></nav>
       <a class="github-link" href="https://github.com/patrykfajga" target="_blank" rel="noreferrer">GitHub ↗</a>
     </div>
   </header>
-
   <main class="page-width">
-    <section class="intro" id="top">
+    <section class="compact-profile" id="about">
       <p class="eyebrow">Portfolio · 2026</p>
       <h1>Patryk Fajga</h1>
-      <p class="intro-text">Student zainteresowany projektami internetowymi, pracą z informacją i wydarzeniami.</p>
-      <div class="intro-links"><a href="{{ "/projects/" | relURL }}">Projekty <span>→</span></a><a href="{{ "/conferences/" | relURL }}">Konferencje <span>→</span></a><a href="https://github.com/patrykfajga" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></div>
-    </section>
-
-    <section class="content-section about-section" id="about">
-      <div class="section-label"><span>01</span><span>O mnie</span></div>
-      <div class="about-grid">
-        <div>
-          <h2>Kilka słów</h2>
-          <p>Uczę się przez robienie. Interesuje mnie, jak pomysł zamienić w prostą stronę, narzędzie albo dobrze uporządkowaną informację.</p>
-          <p>Ta strona zbiera rzeczy, które są już gotowe, i te, które dopiero powstają.</p>
-        </div>
-        <dl class="fact-list">
-          <div><dt>Obszary</dt><dd>web · projekty · treść</dd></div>
-          <div><dt>Forma pracy</dt><dd>krótkie iteracje</dd></div>
-          <div><dt>Aktualnie</dt><dd>uczę się i buduję</dd></div>
-        </dl>
+      <p class="compact-role">Student zainteresowany projektami internetowymi, pracą z informacją i wydarzeniami.</p>
+      <p class="compact-copy">Uczę się przez robienie. Interesuje mnie, jak pomysł zamienić w prostą stronę, narzędzie albo dobrze uporządkowaną informację.</p>
+      <div class="compact-links"><a href="{{ "/projects/" | relURL }}">Projekty →</a><a href="{{ "/conferences/" | relURL }}">Konferencje →</a><a class="action-link" href="https://github.com/patrykfajga" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+      <div class="compact-details">
+        <div><h2>Zainteresowania</h2><ul><li>web i proste narzędzia</li><li>praca z informacją</li><li>wydarzenia i rozmowy</li></ul></div>
+        <div><h2>Edukacja</h2><p>Student. Aktualnie uczę się, buduję i zapisuję kolejne projekty.</p></div>
       </div>
     </section>
-
-    <section class="content-section" id="projects">
-      <div class="section-label"><span>02</span><span>Projekty</span><a href="{{ "/projects/" | relURL }}">Wszystkie →</a></div>
-      <div class="work-list">
-        {{ $projects := where site.RegularPages "Section" "projects" }}
-        {{ range $i, $project := first 3 $projects }}
-        <a class="work-row" href="{{ $project.RelPermalink }}"><span class="work-index">0{{ add $i 1 }}</span><span class="work-title">{{ $project.Title }}<small>{{ $project.Summary }}</small></span><span class="work-year">{{ $project.Date.Format "2006" }}</span><span class="work-arrow">↗</span></a>
-        {{ end }}
-      </div>
-    </section>
-
-    <section class="content-section" id="conferences">
-      <div class="section-label"><span>03</span><span>Konferencje</span><a href="{{ "/conferences/" | relURL }}">Wszystkie →</a></div>
-      <div class="work-list">
-        {{ $conferences := where site.RegularPages "Section" "conferences" }}
-        {{ range $i, $conference := first 3 $conferences }}
-        <a class="work-row" href="{{ $conference.RelPermalink }}"><span class="work-index">0{{ add $i 1 }}</span><span class="work-title">{{ $conference.Title }}<small>{{ $conference.Summary }}</small></span><span class="work-year">{{ $conference.Date.Format "2006" }}</span><span class="work-arrow">↗</span></a>
-        {{ end }}
-      </div>
-    </section>
-
-    <section class="contact-section"><p class="eyebrow">Kontakt</p><p class="contact-text">Jeśli chcesz porozmawiać o projekcie, napisz przez <a href="https://github.com/patrykfajga" target="_blank" rel="noreferrer">GitHub ↗</a>.</p></section>
   </main>
-
-  <footer class="site-footer page-width"><span>© 2026 Patryk Fajga</span><a href="#top">Do góry ↑</a></footer>
+  <footer class="site-footer page-width"><span>© 2026 Patryk Fajga</span><a href="https://github.com/patrykfajga" target="_blank" rel="noreferrer">GitHub ↗</a></footer>
 </body>
 </html>
