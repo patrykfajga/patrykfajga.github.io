@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <title>{{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+</head>
+<body>
+<header class="site-header">
+  <div class="shell nav-wrap">
+    <a class="brand" href="{{ "/" | relURL }}">PF<span>.</span></a>
+    <nav class="nav-links" aria-label="Główna nawigacja">
+      <a href="{{ "/#about" | relURL }}">O mnie</a>
+      <a href="{{ "/projects/" | relURL }}">Projekty</a>
+      <a href="{{ "/conferences/" | relURL }}">Konferencje</a>
+    </nav>
+    <a class="nav-contact" href="https://github.com/patrykfajga">GitHub <span>↗</span></a>
+  </div>
+</header>
+<main>
+  <section class="hero shell">
+    <div class="hero-copy">
+      <p class="kicker">Portfolio / 2026</p>
+      <h1>Rzeczy, które <em>robię</em>, zostają na dłużej.</h1>
+      <p class="hero-lead">Buduję projekty, uczę się przez praktykę i zapisuję rzeczy, które warto pokazać.</p>
+      <div class="hero-actions">
+        <a class="button button-dark" href="{{ "/projects/" | relURL }}">Zobacz projekty <span>↗</span></a>
+        <a class="text-link" href="{{ "/#about" | relURL }}">Kilka słów o mnie <span>↓</span></a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-grid"></div>
+      <div class="visual-circle visual-circle-one"></div>
+      <div class="visual-circle visual-circle-two"></div>
+      <div class="visual-monogram">PF</div>
+      <span class="visual-caption">student / creator</span>
+    </div>
+  </section>
+  <section id="about" class="shell section about-section">
+    <div class="section-label"><span>01</span><span>O mnie</span></div>
+    <div class="about-grid">
+      <h2>Nie kolekcjonuję<br><em>pomysłów.</em> Sprawdzam je.</h2>
+      <div class="about-copy">
+        <p>To miejsce na wybrane projekty, konferencje i rzeczy, nad którymi aktualnie pracuję.</p>
+        <p>Bez długiego bio. Bez nadęcia. Zobacz, co powstało.</p>
+        <a class="arrow-link" href="https://github.com/patrykfajga">Napisz lub zajrzyj na GitHub <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="shell section feature-section">
+    <div class="section-label"><span>02</span><span>Wybrane</span></div>
+    <div class="section-heading-row"><h2>Projekty</h2><a class="arrow-link" href="{{ "/projects/" | relURL }}">Wszystkie projekty <span>↗</span></a></div>
+    <div class="card-grid">
+      {{ $projects := where site.RegularPages "Section" "projects" }}
+      {{ range $i, $project := first 3 $projects }}
+      <a class="work-card" href="{{ $project.RelPermalink }}">
+        <div class="card-top"><span>{{ printf "%02d" (add $i 1) }}</span><span>{{ with $project.Params.year }}{{ . }}{{ end }}</span></div>
+        <div class="card-mark {{ with $project.Params.accent }}{{ . }}{{ end }}">{{ with $project.Params.symbol }}{{ . }}{{ else }}✦{{ end }}</div>
+        <p class="card-tag">{{ with $project.Params.tags }}{{ index . 0 }}{{ end }}</p>
+        <h3>{{ $project.Title }}</h3>
+        <p>{{ $project.Summary }}</p>
+        <span class="card-arrow">↗</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  <section class="shell section conference-section">
+    <div class="section-label"><span>03</span><span>Wydarzenia</span></div>
+    <div class="section-heading-row"><h2>Konferencje</h2><a class="arrow-link" href="{{ "/conferences/" | relURL }}">Zobacz wszystkie <span>↗</span></a></div>
+    <div class="conference-list">
+      {{ $conferences := where site.RegularPages "Section" "conferences" }}
+      {{ range $i, $conference := first 3 $conferences }}
+      <a class="conference-row" href="{{ $conference.RelPermalink }}"><span class="row-number">{{ printf "%02d" (add $i 1) }}</span><span class="row-year">{{ with $conference.Params.year }}{{ . }}{{ end }}</span><span class="row-title">{{ $conference.Title }}</span><span class="row-arrow">↗</span></a>
+      {{ end }}
+    </div>
+  </section>
+  <section id="contact" class="shell contact-panel">
+    <div><p class="kicker">Masz temat?</p><h2>Porozmawiajmy<br><em>konkretnie.</em></h2></div>
+    <a class="button button-light" href="https://github.com/patrykfajga">Otwórz GitHub <span>↗</span></a>
+  </section>
+</main>
+<footer class="shell site-footer"><span>© 2026 Patryk Fajga</span><span>Portfolio / main</span></footer>
+</body>
+</html>
