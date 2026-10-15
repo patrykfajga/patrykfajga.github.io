@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/css/site.css?v=7" | relURL }}">
+  <link rel="stylesheet" href="{{ "/css/site.css?v=9" | relURL }}">
 </head>
 <body>
   <header class="site-header">
@@ -18,6 +18,7 @@
         <a href="{{ "/#about" | relURL }}">O mnie</a>
         <a href="{{ "/projects/" | relURL }}">Projekty</a>
         <a href="{{ "/conferences/" | relURL }}">Konferencje</a>
+        <a href="{{ "/publications/" | relURL }}">Publikacje</a>
       </nav>
     </div>
   </header>
@@ -41,24 +42,33 @@
           </a>
         </div>
       </section>
-      <p class="compact-role">Student zainteresowany projektami internetowymi, pracą z informacją i wydarzeniami.</p>
-      <p class="compact-copy">Uczę się przez robienie. Interesuje mnie, jak pomysł zamienić w prostą stronę, narzędzie albo dobrze uporządkowaną informację.</p>
+      <p class="compact-role">Obecnie studiuję kognitywistykę na studiach magisterskich na Uniwersytecie Kazimierza Wielkiego w Bydgoszczy. Moje zainteresowania są bardzo interdyscyplinarne, a ja sam jestem ciekawy wielu rzeczy. Gdy tylko mam czas, uczę się wszystkiego, co mnie zaciekawi. Szczególnie interesuje mnie człowiek i sposób funkcjonowania jego mózgu, sztuczna inteligencja oraz jej możliwości, a także tworzenie własnych narzędzi badawczych.</p>
+      <p class="compact-copy">Strona powstała, aby dzielić się moją pracą oraz udostępniać informacje na mój temat, w tym dane kontaktowe. Będę również publikować tutaj projekty i treści, nad którymi obecnie pracuję oraz które będę tworzyć w przyszłości.</p>
       <div class="compact-links">
         <a href="{{ "/projects/" | relURL }}">Projekty →</a>
         <a href="{{ "/conferences/" | relURL }}">Konferencje →</a>
+        <a href="{{ "/publications/" | relURL }}">Publikacje →</a>
       </div>
       <div class="compact-details">
         <div>
           <h2>Zainteresowania</h2>
           <ul>
             <li>psychologia poznawcza</li>
-            <li>game dev</li>
             <li>kognitywistyka</li>
+            <li>AI</li>
+            <li>game dev</li>
           </ul>
         </div>
-        <div>
-          <h2>Edukacja</h2>
-          <p>Student. Aktualnie uczę się, buduję i zapisuję kolejne projekty.</p>
+        <div class="education-block">
+          <div class="education-title-row">
+            <span class="education-mark" aria-hidden="true">UKW</span>
+            <h2>Edukacja</h2>
+          </div>
+          <div class="education-list">
+            <p><strong>Studia magisterskie z kognitywistyki</strong><br>Uniwersytet Kazimierza Wielkiego w Bydgoszczy</p>
+            <p><strong>Studia licencjackie z kognitywistyki</strong><br>2023–2026 · obrona w sierpniu 2026</p>
+            <p class="education-thesis"><span>Temat pracy licencjackiej:</span><br><em>Związek percepcyjnych wskazówek środowiskowych i instrukcji werbalnych z poczuciem immersji w oparciu o autorski projekt gry na silniku Unity</em></p>
+          </div>
         </div>
       </div>
     </section>
