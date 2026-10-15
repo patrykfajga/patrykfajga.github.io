@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/css/site.css?v=8" | relURL }}">
+  <link rel="stylesheet" href="{{ "/css/site.css?v=9" | relURL }}">
 </head>
 <body>
   <header class="site-header">
@@ -17,6 +17,7 @@
         <a href="{{ "/#about" | relURL }}">O mnie</a>
         <a href="{{ "/projects/" | relURL }}">Projekty</a>
         <a href="{{ "/conferences/" | relURL }}">Konferencje</a>
+        <a href="{{ "/publications/" | relURL }}">Publikacje</a>
       </nav>
     </div>
   </header>
@@ -27,7 +28,7 @@
         {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
       </div>
     </section>
-    {{ if eq .Section "conferences" }}
+    {{ if or (eq .Section "conferences") (eq .Section "publications") }}
     <section class="conference-text page-width">
       {{ .Content }}
     </section>
