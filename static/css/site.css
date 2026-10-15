@@ -151,3 +151,11 @@ h2 { margin-bottom: 24px; font-size: clamp(2.2rem, 4vw, 2.75rem); line-height: 1
   .archive-item--summary { grid-template-columns: 28px minmax(0, 1fr) 18px; }
   .archive-content .archive-date { display: none; }
 }
+
+.education-title-row { display: flex; align-items: center; gap: 14px; }
+.education-title-row h2 { margin-bottom: 18px; }
+.education-mark { display: inline-grid; width: 42px; height: 42px; place-items: center; border: 1px solid var(--text); color: var(--text); font-family: var(--mono); font-size: 11px; letter-spacing: .04em; }
+.education-list p { max-width: 620px; margin: 0 0 18px; color: var(--muted); font-size: 15px; }
+.education-list strong { color: var(--text); font-weight: 600; }
+.education-thesis { padding-top: 4px; }
+.education-thesis span { color: var(--text); font-weight: 500; }
