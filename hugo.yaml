@@ -1,0 +1,6 @@
+baseURL: "https://patrykfajga.github.io/"
+languageCode: "pl"
+title: "Patryk Fajga — portfolio"
+enableRobotsTXT: true
+params:
+  description: "Portfolio Patryka Fajgi — projekty, konferencje i prace w toku."
