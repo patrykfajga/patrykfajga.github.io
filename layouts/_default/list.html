@@ -3,26 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }} · {{ .Site.Title }}</title>
+  <title>{{ .Title }} · Patryk Fajga</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "css/site.css?v=2" | relURL }}">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/site.css?v=3" | relURL }}">
 </head>
 <body>
-  <header class="site-header site-header-dark">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="Patryk Fajga — strona główna"><span class="brand-mark">PF</span><span class="brand-name">Patryk Fajga</span></a>
-    <nav class="main-nav" aria-label="Główna nawigacja"><a href="{{ "/#about" | relURL }}">O mnie</a><a href="{{ "/projects/" | relURL }}">Projekty</a><a href="{{ "/conferences/" | relURL }}">Konferencje</a></nav>
-    <a class="header-link" href="https://github.com/patrykfajga" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-  </header>
+  <header class="site-header"><div class="site-header-inner page-width"><a class="site-name" href="{{ "/" | relURL }}">Patryk Fajga</a><nav class="main-nav" aria-label="Główna nawigacja"><a href="{{ "/#about" | relURL }}">O mnie</a><a href="{{ "/projects/" | relURL }}">Projekty</a><a href="{{ "/conferences/" | relURL }}">Konferencje</a></nav><a class="github-link" href="https://github.com/patrykfajga" target="_blank" rel="noreferrer">GitHub ↗</a></div></header>
   <main>
-    <section class="page-hero"><div class="page-hero-inner page-width"><p class="eyebrow"><span class="status-dot"></span> Portfolio / 2026</p><h1>{{ .Title }}</h1><p>{{ .Params.description }}</p></div></section>
-    <section class="archive-list page-width">
-      {{ range $i, $item := .Pages.ByDate.Reverse }}
-      <a class="archive-item" href="{{ $item.RelPermalink }}"><span class="archive-index">0{{ add $i 1 }}</span><span class="archive-date">{{ $item.Date.Format "Jan 2006" }}</span><div><h2>{{ $item.Title }}</h2></div><p class="archive-summary">{{ $item.Summary }}</p><span class="archive-arrow">↗</span></a>
-      {{ end }}
-    </section>
+    <section class="page-hero"><div class="page-width"><p class="eyebrow">Portfolio · 2026</p><h1>{{ .Title }}</h1><p>{{ .Params.description }}</p></div></section>
+    <section class="archive-list page-width">{{ range $i, $item := .Pages.ByDate.Reverse }}<a class="archive-item" href="{{ $item.RelPermalink }}"><span class="archive-index">0{{ add $i 1 }}</span><span class="archive-date">{{ $item.Date.Format "Jan 2006" }}</span><h2>{{ $item.Title }}</h2><p class="archive-summary">{{ $item.Summary }}</p><span class="archive-arrow">↗</span></a>{{ end }}</section>
   </main>
-  <footer class="site-footer page-width"><span>© 2026 Patryk Fajga</span><span>Portfolio / main</span></footer>
+  <footer class="site-footer page-width"><span>© 2026 Patryk Fajga</span><a href="{{ "/" | relURL }}">Strona główna</a></footer>
 </body>
 </html>
