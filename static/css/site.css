@@ -164,3 +164,6 @@ h2 { margin-bottom: 24px; font-size: clamp(2.2rem, 4vw, 2.75rem); line-height: 1
 .single-content { font-size: 16px; }
 
 .compact-role { font-size: 16px; }
+
+.education-logo { display: block; width: 82px; height: 46px; object-fit: contain; object-position: center; }
+.compact-role { max-width: 720px; font-size: 14px; line-height: 1.55; }
