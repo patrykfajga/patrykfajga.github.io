@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Summary }}">
+  <title>{{ .Title }} — {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+</head>
+<body>
+<header class="site-header"><div class="shell nav-wrap"><a class="brand" href="{{ "/" | relURL }}">PF<span>.</span></a><nav class="nav-links" aria-label="Główna nawigacja"><a href="{{ "/#about" | relURL }}">O mnie</a><a href="{{ "/projects/" | relURL }}">Projekty</a><a href="{{ "/conferences/" | relURL }}">Konferencje</a></nav><a class="nav-contact" href="https://github.com/patrykfajga">GitHub <span>↗</span></a></div></header>
+<main class="shell article-main"><a class="back-link" href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a><p class="kicker">{{ with .Params.year }}{{ . }} · {{ end }}{{ with .Params.tags }}{{ index . 0 }}{{ end }}</p><h1>{{ .Title }}</h1><p class="article-summary">{{ .Summary }}</p><div class="article-content">{{ .Content }}</div></main>
+<footer class="shell site-footer"><span>© 2026 Patryk Fajga</span><a href="{{ "/" | relURL }}">← Wróć na stronę główną</a></footer>
+</body>
+</html>
