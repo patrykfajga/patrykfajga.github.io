@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/css/site.css?v=6" | relURL }}">
+  <link rel="stylesheet" href="{{ "/css/site.css?v=8" | relURL }}">
 </head>
 <body>
   <header class="site-header">
@@ -34,11 +34,13 @@
     {{ else }}
     <section class="archive-list page-width">
       {{ range $i, $item := .Pages.ByDate.Reverse }}
-      <a class="archive-item{{ with $item.Summary }} archive-item--summary{{ end }}" href="{{ $item.RelPermalink }}">
+      <a class="archive-item" href="{{ $item.RelPermalink }}">
         <span class="archive-index">0{{ add $i 1 }}</span>
-        <span class="archive-date">{{ $item.Date.Format "Jan 2006" }}</span>
-        <h2>{{ $item.Title }}</h2>
-        {{ with $item.Summary }}<p class="archive-summary">{{ . }}</p>{{ end }}
+        <div class="archive-content">
+          <span class="archive-date">{{ $item.Date.Format "Jan 2006" }}</span>
+          <h2>{{ $item.Title }}</h2>
+          {{ with $item.Summary }}<p class="archive-summary">{{ . }}</p>{{ end }}
+        </div>
         <span class="archive-arrow">↗</span>
       </a>
       {{ end }}
