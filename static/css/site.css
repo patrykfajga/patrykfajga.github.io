@@ -108,3 +108,17 @@ h2 { margin-bottom: 24px; font-size: clamp(2.2rem, 4vw, 2.75rem); line-height: 1
   .archive-item h2 { font-size: 21px; }
 }
 @media (max-width: 430px) { .section-label { grid-template-columns: 30px 1fr; } .section-label a { grid-column: 2; } .site-footer { align-items: flex-start; flex-direction: column; } }
+
+.compact-details { display: block; }
+.compact-details > div + div { margin-top: 52px; padding-top: 28px; border-top: 1px solid var(--line); }
+.contact-block { margin-top: 58px; padding-top: 28px; border-top: 1px solid var(--line); }
+.contact-block h2 { margin-bottom: 20px; font-size: 24px; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 14px 28px; }
+.contact-item { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 15px; }
+.contact-item:hover { color: var(--accent); }
+.contact-icon { display: inline-grid; width: 22px; height: 22px; place-items: center; color: var(--text); }
+.contact-icon svg { width: 20px; height: 20px; }
+.contact-facebook { font-family: var(--display); font-size: 21px; font-weight: 600; line-height: 1; }
+.conference-text { max-width: 780px; padding-top: 44px; padding-bottom: 100px; }
+.conference-text p { margin: 0; padding: 22px 0; color: var(--muted); font-size: 17px; line-height: 1.7; border-bottom: 1px solid var(--line); }
+@media (max-width: 760px) { .contact-links { align-items: flex-start; flex-direction: column; gap: 15px; } .conference-text { padding-top: 28px; } }
