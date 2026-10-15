@@ -159,3 +159,6 @@ h2 { margin-bottom: 24px; font-size: clamp(2.2rem, 4vw, 2.75rem); line-height: 1
 .education-list strong { color: var(--text); font-weight: 600; }
 .education-thesis { padding-top: 4px; }
 .education-thesis span { color: var(--text); font-weight: 500; }
+
+.single-wrap h1 { max-width: 900px; font-size: clamp(2.15rem, 4.3vw, 3.2rem); line-height: 1.18; }
+.single-content { font-size: 16px; }
