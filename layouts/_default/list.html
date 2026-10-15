@@ -34,7 +34,7 @@
     {{ else }}
     <section class="archive-list page-width">
       {{ range $i, $item := .Pages.ByDate.Reverse }}
-      <a class="archive-item" href="{{ $item.RelPermalink }}">
+      <a class="archive-item{{ with $item.Summary }} archive-item--summary{{ end }}" href="{{ $item.RelPermalink }}">
         <span class="archive-index">0{{ add $i 1 }}</span>
         <span class="archive-date">{{ $item.Date.Format "Jan 2006" }}</span>
         <h2>{{ $item.Title }}</h2>
