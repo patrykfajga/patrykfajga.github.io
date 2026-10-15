@@ -3,4 +3,6 @@ title: "Związek percepcyjnych wskazówek środowiskowych i instrukcji werbalnyc
 date: 2026-08-01
 ---
 
-– potem dodam tutaj trochę informacji na ten temat.
+[Link do gry](https://ziutkowski.itch.io/insula)
+
+potem dodam tutaj trochę informacji na ten temat.
