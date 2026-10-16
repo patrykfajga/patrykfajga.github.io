@@ -40,7 +40,9 @@
         <div class="archive-content">
           <span class="archive-date">{{ $item.Date.Format "Jan 2006" }}</span>
           <h2>{{ $item.Title }}</h2>
+          {{ if ne $.Section "projects" }}
           {{ with $item.Summary }}<p class="archive-summary">{{ . }}</p>{{ end }}
+          {{ end }}
         </div>
         <span class="archive-arrow">↗</span>
       </a>
