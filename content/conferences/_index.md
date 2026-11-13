@@ -3,6 +3,12 @@ title: "Konferencje"
 description: ""
 ---
 
+Fajga P. (2026), „*Umysł i ciało pod presją wojny kognitywnej*” – poster, IV Międzynarodowa Konferencja Koła Naukowego „Psyche”, Uniwersytet Papieski Jana Pawła II w Krakowie.
+
+Fajga P. (2026), „*Od danych connectomowych do decyzji*”, Boundaries of Artificial Intelligence: From Computational Models to Mind Emulation and Superintelligent Systems, ISKIF UKEN.
+
+Fajga P. (2026), „*Insula*” – gra horrorowa w stylu PSX, Festiwal Indyków 4.0 – konkurs 5 Minute Killer Talks, Biblioteka UKW.
+
 Fajga P. (2026), „*Autorska gra jako środowisko badania immersji – porównywanie wskazówek środowiskowych i instrukcji tekstowych*”, KOGNI-TOR, Uniwersytet Mikołaja Kopernika w Toruniu.
 
 Fajga P. (2026), „*Związek percepcyjnych wskazówek środowiskowych i instrukcji werbalnych z poczuciem immersji w oparciu o autorski projekt gry na silniku Unity*”, IV Studencka Konferencja Naukowa „Człowiek - Media - Świat Cyfrowy”, Uniwersytet Kazimierza Wielkiego w Bydgoszczy.
