@@ -8,7 +8,4 @@ Projekt wykorzystuje dane BANC uzyskane z obrazów EM. Zostały one uporządkowa
 
 W prezentacji pokazano również porównanie wariantów modelu. Wariant Functional odrzucał ryzykowną ofertę w 79,2% przypadków, model z przetasowanymi połączeniami w 85,0%, model z uproszczoną pamięcią w 71,8%, a wariant bez central complex w 77,2%. Po wyłączeniu modułu emergency wynik spadł do 18,2%, co wskazuje na jego znaczenie dla zachowania modelu.
 
-<video controls preload="metadata" style="display:block;width:100%;max-width:960px;height:auto;margin:2rem 0;">
-  <source src="/videos/flymind-konferencja-2026-11-20-v2.mp4" type="video/mp4">
-  Twoja przeglądarka nie obsługuje odtwarzania wideo.
-</video>
+{{< video src="/videos/flymind-konferencja-2026-11-20-v2.mp4" >}}
