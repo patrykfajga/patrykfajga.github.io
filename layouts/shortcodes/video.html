@@ -1,0 +1,6 @@
+{{- $src := .Get "src" -}}
+{{- $type := .Get "type" | default "video/mp4" -}}
+<video controls preload="metadata" style="display:block;width:100%;max-width:960px;height:auto;margin:2rem 0;">
+  <source src="{{ $src }}" type="{{ $type }}">
+  Twoja przeglądarka nie obsługuje odtwarzania wideo.
+</video>
